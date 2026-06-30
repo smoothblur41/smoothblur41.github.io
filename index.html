@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>smoothblur41</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at top,#182b55,#02050d);
+    color:white;
+}
+
+
+/* stars */
+
+body:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+    radial-gradient(white 1px,transparent 1px);
+    background-size:45px 45px;
+    opacity:.25;
+    animation:stars 60s linear infinite;
+}
+
+@keyframes stars{
+    from{
+        transform:translateY(0);
+    }
+    to{
+        transform:translateY(500px);
+    }
+}
+
+
+/* glass profile */
+
+.card{
+
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
+    width:420px;
+
+    padding:35px;
+
+    background:
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(15px);
+
+    border-radius:25px;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    box-shadow:
+    0 0 40px rgba(0,150,255,.3);
+
+    text-align:center;
+
+}
+
+
+h1{
+
+    color:#62c9ff;
+
+    font-size:42px;
+
+    margin-bottom:10px;
+
+}
+
+
+.desc{
+
+    color:#b9dcff;
+
+    margin-bottom:25px;
+
+}
+
+
+.info{
+
+    line-height:2;
+
+    font-size:18px;
+
+}
+
+
+
+/* floating crewmates */
+
+.float{
+
+    position:absolute;
+
+    width:60px;
+
+    animation:rise linear infinite;
+
+}
+
+
+.one{
+
+    left:10%;
+
+    bottom:-100px;
+
+    animation-duration:18s;
+
+}
+
+
+.two{
+
+    left:30%;
+
+    bottom:-120px;
+
+    animation-duration:25s;
+
+}
+
+
+.three{
+
+    right:25%;
+
+    bottom:-100px;
+
+    animation-duration:20s;
+
+}
+
+
+.four{
+
+    right:8%;
+
+    bottom:-130px;
+
+    animation-duration:28s;
+
+}
+
+
+@keyframes rise{
+
+    from{
+
+        transform:
+        translateY(0)
+        rotate(0deg);
+
+    }
+
+    to{
+
+        transform:
+        translateY(-120vh)
+        rotate(25deg);
+
+    }
+
+}
+
+
+
+/* walking crewmate */
+
+
+.walk{
+
+    position:absolute;
+
+    bottom:20px;
+
+    width:90px;
+
+    left:-120px;
+
+    animation:walk 16s linear infinite;
+
+}
+
+
+@keyframes walk{
+
+    from{
+
+        left:-120px;
+
+    }
+
+    to{
+
+        left:110%;
+
+    }
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<img class="float one" src="images/red.png">
+
+<img class="float two" src="images/blue.png">
+
+<img class="float three" src="images/green.png">
+
+<img class="float four" src="images/yellow.png">
+
+
+<img class="walk" src="images/walking.gif">
+
+
+
+<div class="card">
+
+<h1>
+smoothblur41
+</h1>
+
+
+<div class="desc">
+Average Among Us Player
+</div>
+
+
+<div class="info">
+
+<p><b>Gender:</b> He/Him</p>
+
+<p><b>Favorite Food:</b> Pizza</p>
+
+<p><b>Favorite Map:</b> Airship</p>
+
+<p><b>Favorite Role:</b> Crewmate</p>
+
+</div>
+
+
+</div>
+
+
+</body>
+
+</html>
